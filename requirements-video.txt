@@ -1,0 +1,4 @@
+-r requirements.txt
+Pillow>=12.3
+imageio-ffmpeg>=0.6
+playwright>=1.64

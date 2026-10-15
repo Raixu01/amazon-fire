@@ -1,0 +1,31 @@
+# Inventário de dados brutos
+
+Gerado automaticamente por `scripts/validar_dados.py`. A data de aquisição abaixo é a data de inventário quando o metadado original não foi fornecido.
+
+| arquivo | origem | data de aquisição/inventário | SHA-256 |
+|---|---|---|---|
+| focos_br_ref_2003.zip | https://dataserver-coids.inpe.br/queimadas/queimadas/focos/csv/anual/Brasil_sat_ref/focos_br_ref_2003.zip | 2026-10-15T13:09:01.662022+00:00 | `6c0a71c0f35e5a02739b73b5544f69da73b7f95310558383ecf4ed0a60f9abc9` |
+| focos_br_ref_2004.zip | https://dataserver-coids.inpe.br/queimadas/queimadas/focos/csv/anual/Brasil_sat_ref/focos_br_ref_2004.zip | 2026-10-15T13:09:02.385644+00:00 | `69b9f74ac8d86f4f18564f949440738f825550de36747bdd8432a32f5dca96e7` |
+| focos_br_ref_2005.zip | https://dataserver-coids.inpe.br/queimadas/queimadas/focos/csv/anual/Brasil_sat_ref/focos_br_ref_2005.zip | 2026-10-15T13:09:03.046856+00:00 | `ebacf95a4489d7f5ef2ff3fd722f28b7b9547171e168b88f42cfd52693cf2b4e` |
+| focos_br_ref_2006.zip | https://dataserver-coids.inpe.br/queimadas/queimadas/focos/csv/anual/Brasil_sat_ref/focos_br_ref_2006.zip | 2026-10-15T13:09:03.530880+00:00 | `9925ac3675b160653df44556b301389f44ffc9486b589527624595526db177fe` |
+| focos_br_ref_2007.zip | https://dataserver-coids.inpe.br/queimadas/queimadas/focos/csv/anual/Brasil_sat_ref/focos_br_ref_2007.zip | 2026-10-15T13:09:04.363666+00:00 | `f61aa2ee5c3451a4e739416d8c863c598e1440c0d1d4a9d088fc2bde99d35901` |
+| focos_br_ref_2008.zip | https://dataserver-coids.inpe.br/queimadas/queimadas/focos/csv/anual/Brasil_sat_ref/focos_br_ref_2008.zip | 2026-10-15T13:09:04.802415+00:00 | `1b68a545148d759f05fefa635a1b7db09e389549e29faca540f8e676b6d67615` |
+| focos_br_ref_2009.zip | https://dataserver-coids.inpe.br/queimadas/queimadas/focos/csv/anual/Brasil_sat_ref/focos_br_ref_2009.zip | 2026-10-15T13:09:05.128080+00:00 | `9bc43627ab1c25910fbd76060f1753dcb9b01f915b91cf9c5a2d11324a5f9dd1` |
+| focos_br_ref_2010.zip | https://dataserver-coids.inpe.br/queimadas/queimadas/focos/csv/anual/Brasil_sat_ref/focos_br_ref_2010.zip | 2026-10-15T13:09:05.819139+00:00 | `4537c5cdeee56e50ca6e7fa614eba77ea1eed5079394a8428f7d3ea75746c785` |
+| focos_br_ref_2011.zip | https://dataserver-coids.inpe.br/queimadas/queimadas/focos/csv/anual/Brasil_sat_ref/focos_br_ref_2011.zip | 2026-10-15T13:09:06.168759+00:00 | `7b14ce9a8c98411bf8152de32892af25066a718a5c1c7bfe7928a885aca2f3e4` |
+| focos_br_ref_2012.zip | https://dataserver-coids.inpe.br/queimadas/queimadas/focos/csv/anual/Brasil_sat_ref/focos_br_ref_2012.zip | 2026-10-15T13:09:06.631455+00:00 | `cf8378a7dec65f869315cc9dded0e35e0dce54957a82ed11b12d69c1635359e7` |
+| focos_br_ref_2013.zip | https://dataserver-coids.inpe.br/queimadas/queimadas/focos/csv/anual/Brasil_sat_ref/focos_br_ref_2013.zip | 2026-10-15T13:09:06.916956+00:00 | `33cf264244d05ccc1b2bcbf1e62079a69582ad639b7c238d23011e3c622776a9` |
+| focos_br_ref_2014.zip | https://dataserver-coids.inpe.br/queimadas/queimadas/focos/csv/anual/Brasil_sat_ref/focos_br_ref_2014.zip | 2026-10-15T13:09:07.289781+00:00 | `db34a8c4bc4c1c77769a186f7d384bc0f866ce3699fa739c7cd34e2cd2048792` |
+| focos_br_ref_2015.zip | https://dataserver-coids.inpe.br/queimadas/queimadas/focos/csv/anual/Brasil_sat_ref/focos_br_ref_2015.zip | 2026-10-15T13:09:07.778793+00:00 | `72d1aac5db423d5226e0ba2efadb457c25df99fc3fdb5a3e7c271ebb69560d5e` |
+| focos_br_ref_2016.zip | https://dataserver-coids.inpe.br/queimadas/queimadas/focos/csv/anual/Brasil_sat_ref/focos_br_ref_2016.zip | 2026-10-15T13:09:08.137317+00:00 | `aa26dc356923f573eb80bb5bef1bfa9ff27423cd382e2cc240ab0cf2ee9be73b` |
+| focos_br_ref_2017.zip | https://dataserver-coids.inpe.br/queimadas/queimadas/focos/csv/anual/Brasil_sat_ref/focos_br_ref_2017.zip | 2026-10-15T13:09:08.539692+00:00 | `f1300f35c866ca7c2d699a3f806eba533d80272ab479a436005aa98451684d3c` |
+| focos_br_ref_2018.zip | https://dataserver-coids.inpe.br/queimadas/queimadas/focos/csv/anual/Brasil_sat_ref/focos_br_ref_2018.zip | 2026-10-15T13:09:08.819115+00:00 | `f6d6168071d365073a3ba7e277f9464739f3f502cc411c9f64399c4ea740390d` |
+| focos_br_ref_2019.zip | https://dataserver-coids.inpe.br/queimadas/queimadas/focos/csv/anual/Brasil_sat_ref/focos_br_ref_2019.zip | 2026-10-15T13:09:09.240546+00:00 | `58a6fe69d282d087822aade262826bf2139f2554781d0e37b672567369e4f733` |
+| focos_br_ref_2020.zip | https://dataserver-coids.inpe.br/queimadas/queimadas/focos/csv/anual/Brasil_sat_ref/focos_br_ref_2020.zip | 2026-10-15T13:09:09.720572+00:00 | `fba793aa304863445dad6d434dd57bd0e904d97f50d9652a729c30ddf8fb7686` |
+| focos_br_ref_2021.zip | https://dataserver-coids.inpe.br/queimadas/queimadas/focos/csv/anual/Brasil_sat_ref/focos_br_ref_2021.zip | 2026-10-15T13:09:10.108847+00:00 | `9edeb229c078b98df37d17b460bed74a0d13bd0688a530386ca815ba2f8a68e6` |
+| focos_br_ref_2022.zip | https://dataserver-coids.inpe.br/queimadas/queimadas/focos/csv/anual/Brasil_sat_ref/focos_br_ref_2022.zip | 2026-10-15T13:09:10.583890+00:00 | `75538cbfb99bbbe543cb786d7b8f7650537a1333327f8bf17cda7178c01878ea` |
+| focos_br_ref_2023.zip | https://dataserver-coids.inpe.br/queimadas/queimadas/focos/csv/anual/Brasil_sat_ref/focos_br_ref_2023.zip | 2026-10-15T13:09:11.011128+00:00 | `4cc635d1adf1a7f59d18640ff13a8779cb3b0f2aecbc867dacc86959d892b880` |
+| focos_br_ref_2024.zip | https://dataserver-coids.inpe.br/queimadas/queimadas/focos/csv/anual/Brasil_sat_ref/focos_br_ref_2024.zip | 2026-10-15T13:09:11.600833+00:00 | `a2cec2f67483a4a95956a471d5cbdb7b3cbd93b21c9b87c845a649ef89abf4e1` |
+| focos_br_ref_2025.zip | https://dataserver-coids.inpe.br/queimadas/queimadas/focos/csv/anual/Brasil_sat_ref/focos_br_ref_2025.zip | 2026-10-15T13:09:11.907256+00:00 | `63b144c47279991dca0f2007e23e15b4a932355b6c93d033d81a245a8eab56ca` |
+| Mun_Amazonia_Legal_2024_shp.zip | https://geoftp.ibge.gov.br/organizacao_do_territorio/estrutura_territorial/amazonia_legal/2024/ | 2026-10-15T13:09:11.914751+00:00 | `1af12c71fd1eb33f3eaa3265a26f767ef189efe40272104fd0968cd54385dea4` |
+| Limites_Amazonia_Legal_2024_shp.zip | https://geoftp.ibge.gov.br/organizacao_do_territorio/estrutura_territorial/amazonia_legal/2024/ | 2026-10-15T13:09:11.965028+00:00 | `76bb6e19016997f6dbda8b4dda49eb9f1c8f9eb7e6fdb353be0daa7156156e54` |

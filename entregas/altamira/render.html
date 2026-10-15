@@ -1,0 +1,14 @@
+<!doctype html><html><head><meta charset="utf-8"><script src="https://cesium.com/downloads/cesiumjs/releases/1.127/Build/Cesium/Cesium.js"></script><link href="https://cesium.com/downloads/cesiumjs/releases/1.127/Build/Cesium/Widgets/widgets.css" rel="stylesheet"><style>html,body,#map{width:100%;height:100%;margin:0;overflow:hidden;background:#071923}.cesium-widget-credits{display:none}</style></head><body><div id="map"></div><script>
+window.errors=[]; window.onerror=(m)=>errors.push(m);
+(async()=>{
+ const data=await(await fetch('cena.json')).json(); window.data=data;
+ const terrain=await Cesium.ArcGISTiledElevationTerrainProvider.fromUrl('https://elevation3d.arcgis.com/arcgis/rest/services/WorldElevation3D/Terrain3D/ImageServer');
+ const imagery=await Cesium.ArcGisMapServerImageryProvider.fromUrl('https://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer');
+ const v=window.v=new Cesium.Viewer('map',{terrainProvider:terrain,baseLayer:new Cesium.ImageryLayer(imagery),animation:false,timeline:false,baseLayerPicker:false,geocoder:false,homeButton:false,sceneModePicker:false,navigationHelpButton:false,fullscreenButton:false,selectionIndicator:false,infoBox:false,contextOptions:{webgl:{preserveDrawingBuffer:true}}});
+ v.scene.globe.enableLighting=false; v.scene.fog.enabled=false; v.scene.globe.maximumScreenSpaceError=2;
+ for(const f of data.limites){const alt=f.properties.codigo_ibge==='1500602';const polys=f.geometry.type==='MultiPolygon'?f.geometry.coordinates:[f.geometry.coordinates];for(const p of polys) v.entities.add({polyline:{positions:Cesium.Cartesian3.fromDegreesArray(p[0].flat()),width:alt?3:1,material:Cesium.Color.fromCssColorString(alt?'#ffe492':'#b2c7bc').withAlpha(alt?1:.5),clampToGround:true}});}
+ window.setCamera=(u)=>{const s=u*u*(3-2*u);v.camera.lookAt(Cesium.Cartesian3.fromDegrees(-53.6,-6.1),new Cesium.HeadingPitchRange(Cesium.Math.toRadians(-8+8*s),Cesium.Math.toRadians(-72-13*s),6500000*(1-s)+1650000*s)); v.scene.render();};
+ window.project=()=>data.focos.map(f=>{const c=Cesium.SceneTransforms.worldToWindowCoordinates(v.scene,Cesium.Cartesian3.fromDegrees(...f.geometry.coordinates));return c?[c.x,c.y]:null});
+ window.getCredits=()=>document.querySelector('.cesium-widget-credits').innerText;
+ setCamera(1);window.ready=true;
+})();</script></body></html>

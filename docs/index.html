@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Pulso • Focos na Amazônia Legal</title>
+  <meta name="description" content="Acompanhe os focos recentes na Amazônia Legal e explore a série histórica do INPE em áreas separadas.">
+  <link rel="stylesheet" href="vendor/leaflet.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Pular para o conteúdo</a>
+<header class="topbar"><a class="brand" href="#recentes" aria-label="Pulso, início"><span class="brand-icon">◉</span> PULSO <span class="brand-caption">AMAZÔNIA LEGAL</span></a><span class="source-top">Observação por satélite <span class="source-dot"></span> INPE + IBGE</span></header>
+<nav class="navigation" aria-label="Áreas de análise"><div class="nav-inner"><button id="nav-recent" class="nav-button active" aria-current="page">Últimos dias <span>Monitoramento recente</span></button><button id="nav-history" class="nav-button">Histórico <span>Evolução ao longo dos anos</span></button></div></nav>
+<main id="main">
+  <section class="intro"><div><p class="eyebrow" id="eyebrow">ACOMPANHE O PRESENTE</p><h1 id="title">Monitoramento recente</h1><p id="description">Onde estão os focos nos últimos dias? Explore o mapa e acompanhe a evolução dos registros.</p></div><div class="intro-note" id="intro-note">Atualização automática<br><strong>Conforme disponibilidade do INPE</strong></div></section>
+  <section class="filters" aria-label="Filtros de análise">
+    <div id="recent-filters"><span class="field-label">Período</span><div class="periods" role="group" aria-label="Período recente"><button data-days="1">24 horas</button><button data-days="3">3 dias</button><button data-days="7" class="selected" aria-pressed="true">7 dias</button><button data-days="30">30 dias</button></div></div>
+    <div id="history-filters" class="filter-row" hidden><label>Ano<select id="year"></select></label><label>Mês<select id="month"><option value="0">Ano inteiro</option></select></label></div>
+    <label>Estado<select id="state"><option value="">Todos os estados</option></select></label>
+    <label class="search-label">Buscar município<input type="search" id="search" placeholder="Digite o nome do município…" autocomplete="off" list="municipal-options"></label>
+    <button id="clear" class="text-button">Limpar filtros</button>
+  <datalist id="municipal-options"></datalist></section>
+  <section id="municipal-profile" class="comparison" hidden><h2 id="municipal-name"></h2><p id="municipal-summary"></p><button id="municipal-clear" class="secondary">Voltar ao território completo</button></section>
+  <p id="period-label" class="period-label"></p>
+  <div id="status" class="notice" role="status" aria-live="polite">Carregando os dados…</div>
+  <section class="stats" aria-label="Resumo do período"><article><span>Focos registrados</span><strong id="total">—</strong><small id="total-note">No período e território selecionados</small></article><article><span>Municípios com registros</span><strong id="municipalities">—</strong><small id="municipalities-note">Na Amazônia Legal</small></article><article><span id="third-label">Observação mais recente</span><strong class="small-stat" id="third">—</strong><small id="third-note">Horário de Brasília</small></article></section>
+  <section id="history-experience" hidden aria-label="Explore o histórico">
+    <div class="experience-heading"><p class="eyebrow">O TEMPO REVELA PADRÕES</p><h2>Um território, muitos ciclos</h2><p>Explore a sazonalidade e compare o mesmo mês entre anos.</p><button id="story-toggle" class="secondary">Pausar narrativa guiada</button></div>
+    <div class="story-layout"><div class="story-copy">
+      <article class="story-step" data-story="calendar"><span class="eyebrow">01 / SAZONALIDADE</span><h3>Quando os focos se concentram?</h3><p>Cada linha é um ano; cada coluna, um mês. As cores compartilham a mesma escala para tornar os períodos comparáveis.</p><button class="text-button">Destacar calendário</button></article>
+      <article class="story-step" data-story="comparison"><span class="eyebrow">02 / CONTEXTO</span><h3>O ano está dentro da faixa histórica?</h3><p>Compare a curva do ano selecionado com a mediana e a metade central dos valores dos demais anos completos.</p><button class="text-button">Destacar comparação</button></article>
+      <article class="story-step" data-story="territory"><span class="eyebrow">03 / TERRITÓRIO</span><h3>A história muda de município para município</h3><p>Busque um município ou selecione pelo mapa ou ranking. O calendário e a comparação passam a mostrar o recorte local, com endereço compartilhável.</p><button class="text-button">Destacar território</button></article>
+    </div><div class="story-visuals"><p id="story-caption" class="eyebrow">LEITURA DO HISTÓRICO</p>
+      <section class="card calendar-card"><div class="card-header"><h2>Calendário de focos</h2></div><p id="calendar-summary" class="plot-summary"></p><div id="calendar-plot" class="plot-host"></div><details class="data-details"><summary>Ver tabela e selecionar mês</summary><div id="calendar-table" class="table-scroll"></div></details></section>
+      <section class="card historical-card"><div class="card-header"><h2>Ano e faixa histórica</h2></div><div id="historical-plot" class="plot-host"></div><p id="historical-summary" class="plot-summary"></p><details class="data-details"><summary>Ver valores da comparação</summary><div id="historical-table" class="table-scroll"></div></details></section>
+    </div></div></section>
+  <section class="card map-card" aria-labelledby="map-title"><div class="card-header"><div><h2 id="map-title">Distribuição dos focos</h2><p id="map-subtitle">Aproxime o mapa para explorar os registros.</p></div><label id="view-label">Visualização<select id="view"><option value="points">Pontos agrupados</option><option value="municipalities">Totais por município</option></select></label><label id="metric-label" hidden>Indicador<select id="metric"><option value="total">Total de focos</option><option value="density">Focos / 1.000 km²</option><option value="change">Variação anual (%)</option><option value="anomaly">Diferença da média (focos)</option></select></label></div><button id="load-map" class="secondary" hidden>Carregar mapa</button><div id="map" aria-label="Mapa dos focos na Amazônia Legal"></div><div class="map-footer"><div id="legend" aria-label="Legenda do mapa"></div><span>Clique em um município para ver seus dados</span></div><div id="detail" class="detail" aria-live="polite">Selecione um município no mapa ou no ranking.</div></section>
+  <section id="comparison" class="comparison" hidden><h2>Comparação histórica</h2><p id="comparison-text"></p><p class="help">A variação compara o mesmo período do ano anterior. A média usa anos completos da série de referência entre 2003 e 2025, excluindo o ano selecionado.</p></section>
+  <div class="bottom-grid"><section class="card chart-card"><div class="card-header"><div><h2 id="chart-title">Evolução diária</h2><p id="chart-subtitle">Focos observados por dia, no horário de Brasília.</p></div><button id="play" hidden class="secondary">▶ Iniciar animação</button></div><div id="chart" class="chart" aria-label="Gráfico de focos"></div><details class="data-details"><summary>Ver valores do gráfico</summary><div id="chart-table"></div></details></section><section class="card ranking-card"><div class="card-header"><div><h2>Municípios com mais focos</h2><p>Até 10 municípios no recorte selecionado.</p></div></div><ol id="ranking" class="ranking"></ol></section></div>
+  <details class="about"><summary>Como interpretar estes dados</summary><p>Um foco é uma detecção por satélite, não uma contagem de incêndios ou de área queimada. Diferentes satélites podem observar o mesmo evento.</p><p>Últimos dias reúne registros operacionais de diferentes satélites. Histórico usa a série do satélite de referência para permitir comparações entre anos. Os totais das duas áreas não são diretamente comparáveis.</p><p>Dias sem arquivo disponível aparecem como lacunas. O dia atual é parcial. Os intervalos recentes são contados a partir do horário atual, mesmo quando há atraso na fonte. As datas da interface usam o horário de Brasília (UTC−3).</p><p>O mapa representa observações, não previsão ou simulação de propagação do fogo.</p></details>
+  <footer><span>PULSO · Amazônia Legal</span><span>Fontes: <a href="https://terrabrasilis.dpi.inpe.br/queimadas/portal/" target="_blank" rel="noopener">INPE</a> · Malha municipal IBGE 2024</span><span id="updated"></span></footer>
+</main>
+<script src="vendor/leaflet.js"></script>
+<script src="vendor/pako.min.js"></script>
+<script src="vendor/d3.min.js"></script><script src="vendor/plot.umd.min.js"></script><script src="vendor/scrollama.min.js"></script>
+<script src="model.js"></script>
+<script src="components/calendario.js"></script><script src="components/comparacao.js"></script><script src="components/municipio.js"></script><script src="components/narrativa.js"></script><script src="app.js"></script>
+</body></html>

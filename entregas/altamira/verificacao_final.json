@@ -1,0 +1,54 @@
+{
+  "dados": "OK",
+  "pontos_visiveis": 11922,
+  "periodo_brasilia": [
+    "2026-10-08T00:00:00-03:00",
+    "2026-10-15T00:00:00-03:00"
+  ],
+  "videos": [
+    {
+      "arquivo": "teste_altamira_2026-10-14.mp4",
+      "metadados": {
+        "ffmpeg_version": "7.1-essentials_build-www.gyan.dev built with gcc 14.2.0 (Rev1, Built by MSYS2 project)",
+        "codec": "h264",
+        "pix_fmt": "yuv420p(progressive)",
+        "fps": 30.0,
+        "source_size": [
+          1920,
+          1080
+        ],
+        "size": [
+          1920,
+          1080
+        ],
+        "rotate": 0,
+        "duration": 6.0
+      },
+      "quadros": 180,
+      "decodificacao_integral": "OK",
+      "bytes": 499376
+    },
+    {
+      "arquivo": "altamira_2026-10-08_a_14_fullhd.mp4",
+      "metadados": {
+        "ffmpeg_version": "7.1-essentials_build-www.gyan.dev built with gcc 14.2.0 (Rev1, Built by MSYS2 project)",
+        "codec": "h264",
+        "pix_fmt": "yuv420p(progressive)",
+        "fps": 30.0,
+        "source_size": [
+          1920,
+          1080
+        ],
+        "size": [
+          1920,
+          1080
+        ],
+        "rotate": 0,
+        "duration": 60.0
+      },
+      "quadros": 1800,
+      "decodificacao_integral": "OK",
+      "bytes": 15702988
+    }
+  ]
+}

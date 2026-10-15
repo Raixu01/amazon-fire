@@ -1,0 +1,10 @@
+ALTAMIRA — PRIMEIRA EDIÇÃO SEM NARRAÇÃO
+
+Período: 8–14/10/2026, sete dias civis completos em Brasília (UTC−3).
+Total: 11.922 detecções multissatélite do INPE, recortadas espacialmente em Altamira. Detecções não equivalem a incêndios únicos nem a área queimada. Não faltou nenhum dos oito arquivos UTC necessários; falhas de aquisição dos sensores não podem ser descartadas. Nenhuma duplicata por horário, posição e satélite foi encontrada no recorte.
+
+Fontes: INPE/Programa Queimadas; limite municipal e vizinhos do IBGE/Amazônia Legal 2024; cena CesiumJS, relevo Esri World Elevation e fundo Esri World Imagery (Esri, Vantor, Earthstar Geographics e GIS User Community). O fundo é um mosaico de datas diversas, não uma fotografia da semana. O risco de fogo é modelado, disponível em 99,21% dos registros, e mostrado apenas nos locais das detecções.
+
+Limitações: limite simplificado apenas no desenho (recorte pela malha original); sobreposição e repetição de observações por sensores; nuvens e lacunas nas imagens recentes MODIS/VIIRS avaliadas. O tempo previsto para essas imagens foi dedicado à distribuição dos focos. Pontos anteriores atenuados não indicam fogo extinto. Os limites de vizinhos aparecem para contexto; as contagens e os pontos são exclusivamente de Altamira.
+
+Entrega: vídeo MP4/H.264 Full HD a 30 fps; teste separado de 6 segundos; camadas GeoJSON/CSV/KML. Proveniência, URLs, hashes e detalhes metodológicos estão em LEIA-ME.md e auditoria.json.
