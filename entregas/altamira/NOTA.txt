@@ -8,3 +8,5 @@ Fontes: INPE/Programa Queimadas; limite municipal e vizinhos do IBGE/Amazônia L
 Limitações: limite simplificado apenas no desenho (recorte pela malha original); sobreposição e repetição de observações por sensores; nuvens e lacunas nas imagens recentes MODIS/VIIRS avaliadas. O tempo previsto para essas imagens foi dedicado à distribuição dos focos. Pontos anteriores atenuados não indicam fogo extinto. Os limites de vizinhos aparecem para contexto; as contagens e os pontos são exclusivamente de Altamira.
 
 Entrega: vídeo MP4/H.264 Full HD a 30 fps; teste separado de 6 segundos; camadas GeoJSON/CSV/KML. Proveniência, URLs, hashes e detalhes metodológicos estão em LEIA-ME.md e auditoria.json.
+
+Edição Remotion: altamira_2026-10-08_a_14_remotion.mp4, com teste_altamira_remotion.mp4. Cenas, textos, contagens e gráficos editáveis em remotion/src; assets visuais versionados em remotion/public. O conteúdo factual e as limitações acima são os mesmos.

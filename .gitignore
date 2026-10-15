@@ -30,3 +30,6 @@ dados-processados/cache_recentes/
 /entregas/altamira/atribuicao_esri.json
 /entregas/altamira/consulta_gibs.txt
 /entregas/altamira/creditos_imagem.txt
+/remotion/node_modules/
+/remotion/.cache/
+/remotion/out/

@@ -4,6 +4,8 @@
 
 [Vídeo final em MP4 Full HD](entregas/altamira/altamira_2026-10-08_a_14_fullhd.mp4), [teste de um dia](entregas/altamira/teste_altamira_2026-10-14.mp4) e [camadas geográficas com nota metodológica](entregas/altamira/camadas_e_notas.zip). A [nota completa](entregas/altamira/LEIA-ME.md) registra fontes, fuso, recorte e limitações. Para reproduzir esta edição sem novos downloads, instale `requirements-video.txt` e execute `python scripts/video_altamira_dados.py --local`; para reconstruir a cena são necessários CesiumJS, serviços de imagem/relevo e um Chromium instalado.
 
+A [edição em Remotion](entregas/altamira/altamira_2026-10-08_a_14_remotion.mp4) tem a mesma janela e os mesmos dados, com cenas e textos editáveis em [`remotion/`](remotion/README.md). Há também um [teste Remotion de um dia](entregas/altamira/teste_altamira_remotion.mp4).
+
 Aplicação estática em `docs/`, com Leaflet e processamento Python. A abertura mostra os últimos 7 dias. O histórico de referência é independente dos dados operacionais recentes.
 
 ## Executar localmente

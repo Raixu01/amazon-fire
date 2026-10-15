@@ -27,7 +27,7 @@ for source in a['fontes']:
     assert hashlib.sha256((OUT/'fontes'/source['arquivo']).read_bytes()).hexdigest()==source['sha256']
 report={'dados':'OK','pontos_visiveis':len(features),'periodo_brasilia':a['periodo_brasilia'],'videos':[]}
 ff=imageio_ffmpeg.get_ffmpeg_exe()
-for file,duration in [('teste_altamira_2026-10-14.mp4',6),('altamira_2026-10-08_a_14_fullhd.mp4',60)]:
+for file,duration in [('teste_altamira_2026-10-14.mp4',6),('altamira_2026-10-08_a_14_fullhd.mp4',60),('teste_altamira_remotion.mp4',6),('altamira_2026-10-08_a_14_remotion.mp4',60)]:
     stream=imageio_ffmpeg.read_frames(str(OUT/file));meta=next(stream);stream.close()
     assert meta['size']==(1920,1080) and meta['fps']==30 and meta['codec']=='h264' and abs(meta['duration']-duration)<.04
     check=subprocess.run([ff,'-v','error','-i',str(OUT/file),'-f','null','-'],capture_output=True,text=True)

@@ -1,0 +1,16 @@
+{
+  "name": "pulso-altamira-remotion",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "studio": "remotion studio src/index.jsx",
+    "render": "remotion render src/index.jsx Altamira2026 ../entregas/altamira/altamira_2026-10-08_a_14_remotion.mp4 --codec h264 --pixel-format yuv420p --concurrency 4",
+    "render:test": "remotion render src/index.jsx AltamiraTeste ../entregas/altamira/teste_altamira_remotion.mp4 --codec h264 --pixel-format yuv420p --concurrency 4"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.535",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "remotion": "4.0.535"
+  }
+}

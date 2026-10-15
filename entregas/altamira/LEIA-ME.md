@@ -2,6 +2,8 @@
 
 Primeira edição sem narração: 60 segundos, 1920 × 1080, 30 fps, MP4/H.264, sem faixa de áudio. O arquivo `teste_altamira_2026-10-14.mp4` tem 6 segundos e mostra somente as detecções do dia 14. A sequência completa está em `altamira_2026-10-08_a_14_fullhd.mp4`.
 
+Uma segunda edição foi montada em Remotion com a mesma base de dados: `altamira_2026-10-08_a_14_remotion.mp4` e `teste_altamira_remotion.mp4`. O projeto editável e os assets necessários estão em `remotion/`.
+
 ## Período e método
 
 8 a 14 de outubro de 2026, dias civis completos em Brasília (UTC−3). Intervalo UTC usado: 08/10 às 03h inclusive até 15/10 às 03h exclusive. Os oito CSVs diários oficiais foram consultados em 15/10/2026. O arquivo de 15/10, ainda parcial, foi usado exclusivamente para fechar as três últimas horas UTC necessárias ao dia 14 de Brasília.
