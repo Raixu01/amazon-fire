@@ -6,6 +6,8 @@
 
 A [edição em Remotion](entregas/altamira/altamira_2026-10-08_a_14_remotion.mp4) tem a mesma janela e os mesmos dados, com cenas e textos editáveis em [`remotion/`](remotion/README.md). Há também um [teste Remotion de um dia](entregas/altamira/teste_altamira_remotion.mp4).
 
+Para assistir no navegador, abra o [player publicado no GitHub Pages](https://raixu01.github.io/amazon-fire/video.html). A página também oferece download direto do MP4.
+
 Aplicação estática em `docs/`, com Leaflet e processamento Python. A abertura mostra os últimos 7 dias. O histórico de referência é independente dos dados operacionais recentes.
 
 ## Executar localmente
