@@ -3,6 +3,8 @@
   "private": true,
   "version": "1.0.0",
   "scripts": {
+    "render:atm": "remotion render src/index.jsx PulsoATM2026 ../entregas/atm-2026/pulso-atm-2026.mp4 --codec h264 --pixel-format yuv420p --concurrency 4",
+    "render:atm:preview": "remotion render src/index.jsx PulsoATMPrevia ../entregas/atm-2026/previa-pulso-atm.mp4 --codec h264 --pixel-format yuv420p --concurrency 4",
     "studio": "remotion studio src/index.jsx",
     "render": "remotion render src/index.jsx Altamira2026 ../entregas/altamira/altamira_2026-10-08_a_14_remotion.mp4 --codec h264 --pixel-format yuv420p --concurrency 4",
     "render:test": "remotion render src/index.jsx AltamiraTeste ../entregas/altamira/teste_altamira_remotion.mp4 --codec h264 --pixel-format yuv420p --concurrency 4"

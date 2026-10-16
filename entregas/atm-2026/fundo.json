@@ -1,0 +1,18 @@
+{
+  "fontes": [
+    {
+      "nome": "amazonia",
+      "url": "https://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?bbox=-8852819.741074538%2C-2173911.027714537%2C-4281411.834833881%2C718933.0379533794&bboxSR=3857&imageSR=3857&size=2560%2C1620&format=jpg&f=image",
+      "sha256": "b862b139e1de7220e0a081667d8fbd2c388d12e3ff711619ff40b718b6db8622",
+      "obtido_utc": "2026-10-16T00:01:32.792227+00:00"
+    },
+    {
+      "nome": "regiao",
+      "url": "https://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?bbox=-6769194.1922567%2C-1166540.9295325184%2C-5317903.780970406%2C-248146.2161404107&bboxSR=3857&imageSR=3857&size=2560%2C1620&format=jpg&f=image",
+      "sha256": "af59b874e356f5e0e5705a2744966f1e3575a546859634b6e0944550b1a55049",
+      "obtido_utc": "2026-10-16T00:01:44.351605+00:00"
+    }
+  ],
+  "creditos": "Source: Esri, Vantor, Earthstar Geographics, and the GIS User Community",
+  "nota": "Mosaico de datas diversas; não representa outubro de 2026."
+}

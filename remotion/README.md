@@ -1,5 +1,11 @@
 # Altamira em Remotion
 
+## Nova edição Pulso | .ATM
+
+`npm run render:atm` produz a edição completa de **100 segundos**, da Amazônia Legal em 2026 à análise diária de Altamira e cinco vizinhos em 1–15/10. `npm run render:atm:preview` produz a prévia de **19 segundos**, com abertura, aproximação e três dias consecutivos. Ambas usam a logo fornecida e os assets offline em `public/atm/`.
+
+Composição: `src/atm-video.jsx`; dados auditados: `src/atm-dados.json`. Fontes, filtro NOAA-20, corte parcial e reprodução dos dados estão na [nota técnica](../entregas/atm-2026/LEIA-ME.md). A edição anterior permanece disponível abaixo.
+
 Composição editável do vídeo de 8–14/10/2026. O enquadramento e o relevo foram capturados com CesiumJS; Remotion compõe os pontos, textos, gráficos, créditos e as cenas. As duas composições têm 1920 × 1080 pixels, 30 fps e nenhuma faixa de áudio.
 
 ## Renderizar

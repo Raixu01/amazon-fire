@@ -1,5 +1,9 @@
 # Pulso — focos na Amazônia Legal
 
+## Pulso | .ATM — edição ampliada de 2026
+
+[Assistir ao vídeo de 100 segundos](https://raixu01.github.io/amazon-fire/video.html), com a marca Pulso, evolução mensal da Amazônia Legal e análise diária de Altamira e cinco vizinhos em 1–15/10/2026. [Nota técnica e auditoria](entregas/atm-2026/LEIA-ME.md). Sensor fixo NOAA-20; dia 15 parcial, corte às 18h40 de Brasília. A edição substitui as camadas a cada dia, sem acúmulo temporal.
+
 ## Vídeo Altamira (8–14 de outubro de 2026)
 
 [Vídeo final em MP4 Full HD](entregas/altamira/altamira_2026-10-08_a_14_fullhd.mp4), [teste de um dia](entregas/altamira/teste_altamira_2026-10-14.mp4) e [camadas geográficas com nota metodológica](entregas/altamira/camadas_e_notas.zip). A [nota completa](entregas/altamira/LEIA-ME.md) registra fontes, fuso, recorte e limitações. Para reproduzir esta edição sem novos downloads, instale `requirements-video.txt` e execute `python scripts/video_altamira_dados.py --local`; para reconstruir a cena são necessários CesiumJS, serviços de imagem/relevo e um Chromium instalado.

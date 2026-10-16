@@ -1,0 +1,515 @@
+{
+  "satelite": "NOAA-20",
+  "nota_sensor": "Seleção editorial de um sensor constante; não é a série oficial de satélite de referência. Contagens não equivalem a incêndios únicos.",
+  "periodo_inicio": "2026-01-01T00:00:00-03:00",
+  "corte_observacoes_brasilia": "2026-10-15T18:40:00-03:00",
+  "ultimo_registro_sensor_brasilia": "2026-10-15T14:52:00-03:00",
+  "dia15_parcial": true,
+  "fontes": [
+    {
+      "url": "https://dataserver-coids.inpe.br/queimadas/queimadas/focos/csv/mensal/Brasil/focos_mensal_br_202601.csv",
+      "arquivo": "focos_mensal_br_202601.csv",
+      "obtido_utc": "2026-10-15T23:04:30.078188+00:00",
+      "last_modified": "Fri, 17 Jul 2026 14:51:14 GMT",
+      "sha256": "d497f7c85bcd0c3a3efa3b4ed2309734fa12b5128b8850127d2ef544a889bf71",
+      "datas_fora_periodo_arquivo": 0,
+      "linhas": 86053,
+      "inicio_utc": "2026-01-01 00:00:00",
+      "fim_utc": "2026-01-31 23:52:00"
+    },
+    {
+      "url": "https://dataserver-coids.inpe.br/queimadas/queimadas/focos/csv/mensal/Brasil/focos_mensal_br_202602.csv",
+      "arquivo": "focos_mensal_br_202602.csv",
+      "obtido_utc": "2026-10-15T23:04:32.376058+00:00",
+      "last_modified": "Fri, 17 Jul 2026 14:52:59 GMT",
+      "sha256": "62dab291af922c71f2bb1378148ef4b8949863ac312832deacd693a29c2f94e1",
+      "datas_fora_periodo_arquivo": 0,
+      "linhas": 42895,
+      "inicio_utc": "2026-02-01 00:00:00",
+      "fim_utc": "2026-02-28 23:50:00"
+    },
+    {
+      "url": "https://dataserver-coids.inpe.br/queimadas/queimadas/focos/csv/mensal/Brasil/focos_mensal_br_202603.csv",
+      "arquivo": "focos_mensal_br_202603.csv",
+      "obtido_utc": "2026-10-15T23:04:29.388425+00:00",
+      "last_modified": "Fri, 17 Jul 2026 14:54:23 GMT",
+      "sha256": "c5253b7f00be76ca5d9d4e56bfd3544f5607dc1bfd6d9532ad79aa85bbcd83a7",
+      "datas_fora_periodo_arquivo": 0,
+      "linhas": 42954,
+      "inicio_utc": "2026-03-01 00:00:00",
+      "fim_utc": "2026-03-31 23:10:00"
+    },
+    {
+      "url": "https://dataserver-coids.inpe.br/queimadas/queimadas/focos/csv/mensal/Brasil/focos_mensal_br_202604.csv",
+      "arquivo": "focos_mensal_br_202604.csv",
+      "obtido_utc": "2026-10-15T23:04:30.015505+00:00",
+      "last_modified": "Fri, 17 Jul 2026 14:55:34 GMT",
+      "sha256": "f5f148015c66e6af18b8878f535b8b3d35556a56a77df955b896c478594f999c",
+      "datas_fora_periodo_arquivo": 0,
+      "linhas": 31736,
+      "inicio_utc": "2026-04-01 00:37:00",
+      "fim_utc": "2026-04-30 23:50:00"
+    },
+    {
+      "url": "https://dataserver-coids.inpe.br/queimadas/queimadas/focos/csv/mensal/Brasil/focos_mensal_br_202605.csv",
+      "arquivo": "focos_mensal_br_202605.csv",
+      "obtido_utc": "2026-10-15T23:04:37.187344+00:00",
+      "last_modified": "Tue, 21 Jul 2026 19:26:46 GMT",
+      "sha256": "352d625a68a75c2857e48ddc279a19f5ee29668ecfe874e52d32ceb7e8993754",
+      "datas_fora_periodo_arquivo": 0,
+      "linhas": 82458,
+      "inicio_utc": "2026-05-01 00:00:00",
+      "fim_utc": "2026-05-31 23:50:00"
+    },
+    {
+      "url": "https://dataserver-coids.inpe.br/queimadas/queimadas/focos/csv/mensal/Brasil/focos_mensal_br_202606.csv",
+      "arquivo": "focos_mensal_br_202606.csv",
+      "obtido_utc": "2026-10-15T23:04:33.091790+00:00",
+      "last_modified": "Tue, 21 Jul 2026 19:28:03 GMT",
+      "sha256": "cc446e981774db3e3ac61dc7efcace43af22c754da035b572244b8f4451c57da",
+      "datas_fora_periodo_arquivo": 0,
+      "linhas": 132772,
+      "inicio_utc": "2026-06-01 00:00:00",
+      "fim_utc": "2026-06-30 23:50:00"
+    },
+    {
+      "url": "https://dataserver-coids.inpe.br/queimadas/queimadas/focos/csv/mensal/Brasil/focos_mensal_br_202607.csv",
+      "arquivo": "focos_mensal_br_202607.csv",
+      "obtido_utc": "2026-10-15T23:04:32.316968+00:00",
+      "last_modified": "Sat, 01 Aug 2026 23:56:11 GMT",
+      "sha256": "8ef86ddfe417b9fb719f34a0ddb7efdca10425dddffdc9aa84c337b9cfe784d9",
+      "datas_fora_periodo_arquivo": 0,
+      "linhas": 159934,
+      "inicio_utc": "2026-07-01 00:00:00",
+      "fim_utc": "2026-07-31 23:56:00"
+    },
+    {
+      "url": "https://dataserver-coids.inpe.br/queimadas/queimadas/focos/csv/mensal/Brasil/focos_mensal_br_202608.csv",
+      "arquivo": "focos_mensal_br_202608.csv",
+      "obtido_utc": "2026-10-15T23:04:59.705613+00:00",
+      "last_modified": "Tue, 01 Sep 2026 23:56:24 GMT",
+      "sha256": "4574013b15b785f42078fe72dfa73b0b48a773666e88025ebe5ef440cc3694da",
+      "datas_fora_periodo_arquivo": 0,
+      "linhas": 651243,
+      "inicio_utc": "2026-08-01 00:00:00",
+      "fim_utc": "2026-08-31 23:50:00"
+    },
+    {
+      "url": "https://dataserver-coids.inpe.br/queimadas/queimadas/focos/csv/mensal/Brasil/focos_mensal_br_202609.csv",
+      "arquivo": "focos_mensal_br_202609.csv",
+      "obtido_utc": "2026-10-15T23:06:05.891961+00:00",
+      "last_modified": "Thu, 01 Oct 2026 23:56:29 GMT",
+      "sha256": "69ecef072d0e0db63698f7e3adc101cd68f593294eefc3dcd97eeaf554bd0248",
+      "datas_fora_periodo_arquivo": 0,
+      "linhas": 777214,
+      "inicio_utc": "2026-09-01 00:00:00",
+      "fim_utc": "2026-09-30 23:50:00"
+    },
+    {
+      "url": "https://dataserver-coids.inpe.br/queimadas/queimadas/focos/csv/diario/Brasil/focos_diario_br_20261001.csv",
+      "arquivo": "focos_diario_br_20261001.csv",
+      "obtido_utc": "2026-10-15T23:04:34.077908+00:00",
+      "last_modified": "Fri, 02 Oct 2026 12:05:02 GMT",
+      "sha256": "5ba6c1ba6880f6283eb152d41941374450743acd20802786bcc8864328a3e25f",
+      "datas_fora_periodo_arquivo": 0,
+      "linhas": 30684,
+      "inicio_utc": "2026-10-01 00:00:00",
+      "fim_utc": "2026-10-01 23:50:00"
+    },
+    {
+      "url": "https://dataserver-coids.inpe.br/queimadas/queimadas/focos/csv/diario/Brasil/focos_diario_br_20261002.csv",
+      "arquivo": "focos_diario_br_20261002.csv",
+      "obtido_utc": "2026-10-15T23:04:35.103614+00:00",
+      "last_modified": "Sat, 03 Oct 2026 12:05:02 GMT",
+      "sha256": "f4076f42ddf0df91200604c315368a9b6c8f12104e675096eef063ef05799733",
+      "datas_fora_periodo_arquivo": 0,
+      "linhas": 21563,
+      "inicio_utc": "2026-10-02 00:00:00",
+      "fim_utc": "2026-10-02 23:58:00"
+    },
+    {
+      "url": "https://dataserver-coids.inpe.br/queimadas/queimadas/focos/csv/diario/Brasil/focos_diario_br_20261003.csv",
+      "arquivo": "focos_diario_br_20261003.csv",
+      "obtido_utc": "2026-10-15T23:04:35.843592+00:00",
+      "last_modified": "Sun, 04 Oct 2026 12:05:03 GMT",
+      "sha256": "24d31c6e3550bf1eec28131b98ae57435efa81bde1bc8ca638db78f31960afe2",
+      "datas_fora_periodo_arquivo": 0,
+      "linhas": 15946,
+      "inicio_utc": "2026-10-03 00:00:00",
+      "fim_utc": "2026-10-03 23:50:00"
+    },
+    {
+      "url": "https://dataserver-coids.inpe.br/queimadas/queimadas/focos/csv/diario/Brasil/focos_diario_br_20261004.csv",
+      "arquivo": "focos_diario_br_20261004.csv",
+      "obtido_utc": "2026-10-15T23:04:36.594501+00:00",
+      "last_modified": "Mon, 05 Oct 2026 12:05:03 GMT",
+      "sha256": "15dc403146c89e8dac09477fc905c3db0ae0440076200f6e93c04f56d1acb86b",
+      "datas_fora_periodo_arquivo": 0,
+      "linhas": 19481,
+      "inicio_utc": "2026-10-04 00:00:00",
+      "fim_utc": "2026-10-04 23:50:00"
+    },
+    {
+      "url": "https://dataserver-coids.inpe.br/queimadas/queimadas/focos/csv/diario/Brasil/focos_diario_br_20261005.csv",
+      "arquivo": "focos_diario_br_20261005.csv",
+      "obtido_utc": "2026-10-15T23:04:38.296312+00:00",
+      "last_modified": "Tue, 06 Oct 2026 12:05:03 GMT",
+      "sha256": "68d6f887d27f85b293e41fbeed801f2d262ce64f46dedd86a4a9870d6f6a621d",
+      "datas_fora_periodo_arquivo": 0,
+      "linhas": 23394,
+      "inicio_utc": "2026-10-05 00:00:00",
+      "fim_utc": "2026-10-05 23:50:00"
+    },
+    {
+      "url": "https://dataserver-coids.inpe.br/queimadas/queimadas/focos/csv/diario/Brasil/focos_diario_br_20261006.csv",
+      "arquivo": "focos_diario_br_20261006.csv",
+      "obtido_utc": "2026-10-15T23:04:44.525934+00:00",
+      "last_modified": "Wed, 07 Oct 2026 12:05:03 GMT",
+      "sha256": "a8e7e6d04af265f82ddb6d462243b470f7fcc8366d23f2e70c20dacc14729212",
+      "datas_fora_periodo_arquivo": 0,
+      "linhas": 36292,
+      "inicio_utc": "2026-10-06 00:00:00",
+      "fim_utc": "2026-10-06 23:50:00"
+    },
+    {
+      "url": "https://dataserver-coids.inpe.br/queimadas/queimadas/focos/csv/diario/Brasil/focos_diario_br_20261007.csv",
+      "arquivo": "focos_diario_br_20261007.csv",
+      "obtido_utc": "2026-10-15T23:04:40.036431+00:00",
+      "last_modified": "Thu, 08 Oct 2026 12:05:03 GMT",
+      "sha256": "29d615f514ab93d8f6f88b90a523bbaae0a6f1758fa0fa0ca80495f8fbcd33ab",
+      "datas_fora_periodo_arquivo": 0,
+      "linhas": 52148,
+      "inicio_utc": "2026-10-07 00:00:00",
+      "fim_utc": "2026-10-07 23:58:00"
+    },
+    {
+      "url": "https://dataserver-coids.inpe.br/queimadas/queimadas/focos/csv/diario/Brasil/focos_diario_br_20261008.csv",
+      "arquivo": "focos_diario_br_20261008.csv",
+      "obtido_utc": "2026-10-15T23:04:41.966393+00:00",
+      "last_modified": "Fri, 09 Oct 2026 12:05:04 GMT",
+      "sha256": "f8fa7b24bc593b99dbc7568f9b30ad917515913e24f378df296b5aaa27732e42",
+      "datas_fora_periodo_arquivo": 0,
+      "linhas": 66801,
+      "inicio_utc": "2026-10-08 00:00:00",
+      "fim_utc": "2026-10-08 23:50:00"
+    },
+    {
+      "url": "https://dataserver-coids.inpe.br/queimadas/queimadas/focos/csv/diario/Brasil/focos_diario_br_20261009.csv",
+      "arquivo": "focos_diario_br_20261009.csv",
+      "obtido_utc": "2026-10-15T23:04:42.952739+00:00",
+      "last_modified": "Sat, 10 Oct 2026 12:05:04 GMT",
+      "sha256": "f04eaf7426b72c1bbcf803da1c338838b79e8b88ccab93cc62ae041c4c7e7ed2",
+      "datas_fora_periodo_arquivo": 0,
+      "linhas": 62753,
+      "inicio_utc": "2026-10-09 00:00:00",
+      "fim_utc": "2026-10-09 23:50:00"
+    },
+    {
+      "url": "https://dataserver-coids.inpe.br/queimadas/queimadas/focos/csv/diario/Brasil/focos_diario_br_20261010.csv",
+      "arquivo": "focos_diario_br_20261010.csv",
+      "obtido_utc": "2026-10-15T23:04:44.858834+00:00",
+      "last_modified": "Sun, 11 Oct 2026 12:05:04 GMT",
+      "sha256": "c9aaa653d74b6aeb150b86b48743872f61dec2996301512ffe0798563014e737",
+      "datas_fora_periodo_arquivo": 0,
+      "linhas": 45285,
+      "inicio_utc": "2026-10-10 00:00:00",
+      "fim_utc": "2026-10-10 23:50:00"
+    },
+    {
+      "url": "https://dataserver-coids.inpe.br/queimadas/queimadas/focos/csv/diario/Brasil/focos_diario_br_20261011.csv",
+      "arquivo": "focos_diario_br_20261011.csv",
+      "obtido_utc": "2026-10-15T23:04:46.448462+00:00",
+      "last_modified": "Mon, 12 Oct 2026 12:05:03 GMT",
+      "sha256": "9fbd96efca9c7ffe70561d03d90272b7525d33315a1d5b54934588597035cc2f",
+      "datas_fora_periodo_arquivo": 0,
+      "linhas": 35704,
+      "inicio_utc": "2026-10-11 00:00:00",
+      "fim_utc": "2026-10-11 23:50:00"
+    },
+    {
+      "url": "https://dataserver-coids.inpe.br/queimadas/queimadas/focos/csv/diario/Brasil/focos_diario_br_20261012.csv",
+      "arquivo": "focos_diario_br_20261012.csv",
+      "obtido_utc": "2026-10-15T23:04:45.721133+00:00",
+      "last_modified": "Tue, 13 Oct 2026 12:05:02 GMT",
+      "sha256": "66a7feb9482438c544f49b0461ba98074a91de09dcc80c10382e4709edb38c96",
+      "datas_fora_periodo_arquivo": 0,
+      "linhas": 27117,
+      "inicio_utc": "2026-10-12 00:00:00",
+      "fim_utc": "2026-10-12 23:58:00"
+    },
+    {
+      "url": "https://dataserver-coids.inpe.br/queimadas/queimadas/focos/csv/diario/Brasil/focos_diario_br_20261013.csv",
+      "arquivo": "focos_diario_br_20261013.csv",
+      "obtido_utc": "2026-10-15T23:04:47.133898+00:00",
+      "last_modified": "Wed, 14 Oct 2026 12:05:03 GMT",
+      "sha256": "85a5e589a951e55f8ef0e19d2195f5dcc75cc853f1141b26981ad0b9ba926af5",
+      "datas_fora_periodo_arquivo": 0,
+      "linhas": 28484,
+      "inicio_utc": "2026-10-13 00:00:00",
+      "fim_utc": "2026-10-13 23:50:00"
+    },
+    {
+      "url": "https://dataserver-coids.inpe.br/queimadas/queimadas/focos/csv/diario/Brasil/focos_diario_br_20261014.csv",
+      "arquivo": "focos_diario_br_20261014.csv",
+      "obtido_utc": "2026-10-15T23:04:47.447043+00:00",
+      "last_modified": "Thu, 15 Oct 2026 12:05:03 GMT",
+      "sha256": "10ad9f225b9047ded2eb597077f53d6dc3d6d7624abec89caf1d447d427e379d",
+      "datas_fora_periodo_arquivo": 0,
+      "linhas": 41874,
+      "inicio_utc": "2026-10-14 00:00:00",
+      "fim_utc": "2026-10-14 23:50:00"
+    },
+    {
+      "url": "https://dataserver-coids.inpe.br/queimadas/queimadas/focos/csv/diario/Brasil/focos_diario_br_20261015.csv",
+      "arquivo": "focos_diario_br_20261015.csv",
+      "obtido_utc": "2026-10-15T23:04:49.156165+00:00",
+      "last_modified": "Thu, 15 Oct 2026 22:06:02 GMT",
+      "sha256": "df795bca7a30d54995e1510145238360633ca6a467d150da9f0d0532a64d1448",
+      "datas_fora_periodo_arquivo": 0,
+      "linhas": 32021,
+      "inicio_utc": "2026-10-15 00:00:00",
+      "fim_utc": "2026-10-15 21:40:00"
+    }
+  ],
+  "registros_invalidos": 0,
+  "duplicatas_removidas": 8,
+  "empates_divisa": 0,
+  "dias_sem_registro_nacional_sensor": [],
+  "contagens_mensais": {
+    "2026-01": 9388,
+    "2026-02": 5755,
+    "2026-03": 5832,
+    "2026-04": 2736,
+    "2026-05": 12439,
+    "2026-06": 18899,
+    "2026-07": 20920,
+    "2026-08": 100183,
+    "2026-09": 121143,
+    "2026-10": 89031
+  },
+  "contagens_diarias": {
+    "2026-10-01": 1137,
+    "2026-10-02": 620,
+    "2026-10-03": 297,
+    "2026-10-04": 726,
+    "2026-10-05": 909,
+    "2026-10-06": 884,
+    "2026-10-07": 1598,
+    "2026-10-08": 1770,
+    "2026-10-09": 1761,
+    "2026-10-10": 2265,
+    "2026-10-11": 2127,
+    "2026-10-12": 1152,
+    "2026-10-13": 896,
+    "2026-10-14": 1035,
+    "2026-10-15": 1505
+  },
+  "total_regional": 18682,
+  "municipios_selecionados": [
+    "1500602",
+    "1508159",
+    "1507300",
+    "1505650",
+    "1503606",
+    "1505031"
+  ],
+  "municipios_vizinhos": [
+    "Uruará",
+    "Novo Progresso",
+    "Matupá",
+    "São Félix do Xingu",
+    "Placas",
+    "Rurópolis",
+    "Guarantã do Norte",
+    "Itaituba",
+    "Peixoto de Azevedo",
+    "Vitória do Xingu",
+    "Trairão",
+    "Senador José Porfírio",
+    "Brasil Novo"
+  ],
+  "comparacoes_diarias": [
+    {
+      "dia1": "2026-10-01",
+      "dia2": "2026-10-02",
+      "registros_identicos": 0,
+      "coordenadas_repetidas": 0,
+      "camadas_iguais": false
+    },
+    {
+      "dia1": "2026-10-02",
+      "dia2": "2026-10-03",
+      "registros_identicos": 0,
+      "coordenadas_repetidas": 0,
+      "camadas_iguais": false
+    },
+    {
+      "dia1": "2026-10-03",
+      "dia2": "2026-10-04",
+      "registros_identicos": 0,
+      "coordenadas_repetidas": 0,
+      "camadas_iguais": false
+    },
+    {
+      "dia1": "2026-10-04",
+      "dia2": "2026-10-05",
+      "registros_identicos": 0,
+      "coordenadas_repetidas": 0,
+      "camadas_iguais": false
+    },
+    {
+      "dia1": "2026-10-05",
+      "dia2": "2026-10-06",
+      "registros_identicos": 0,
+      "coordenadas_repetidas": 0,
+      "camadas_iguais": false
+    },
+    {
+      "dia1": "2026-10-06",
+      "dia2": "2026-10-07",
+      "registros_identicos": 0,
+      "coordenadas_repetidas": 0,
+      "camadas_iguais": false
+    },
+    {
+      "dia1": "2026-10-07",
+      "dia2": "2026-10-08",
+      "registros_identicos": 0,
+      "coordenadas_repetidas": 0,
+      "camadas_iguais": false
+    },
+    {
+      "dia1": "2026-10-08",
+      "dia2": "2026-10-09",
+      "registros_identicos": 0,
+      "coordenadas_repetidas": 0,
+      "camadas_iguais": false
+    },
+    {
+      "dia1": "2026-10-09",
+      "dia2": "2026-10-10",
+      "registros_identicos": 0,
+      "coordenadas_repetidas": 0,
+      "camadas_iguais": false
+    },
+    {
+      "dia1": "2026-10-10",
+      "dia2": "2026-10-11",
+      "registros_identicos": 0,
+      "coordenadas_repetidas": 0,
+      "camadas_iguais": false
+    },
+    {
+      "dia1": "2026-10-11",
+      "dia2": "2026-10-12",
+      "registros_identicos": 0,
+      "coordenadas_repetidas": 0,
+      "camadas_iguais": false
+    },
+    {
+      "dia1": "2026-10-12",
+      "dia2": "2026-10-13",
+      "registros_identicos": 0,
+      "coordenadas_repetidas": 0,
+      "camadas_iguais": false
+    },
+    {
+      "dia1": "2026-10-13",
+      "dia2": "2026-10-14",
+      "registros_identicos": 0,
+      "coordenadas_repetidas": 0,
+      "camadas_iguais": false
+    },
+    {
+      "dia1": "2026-10-14",
+      "dia2": "2026-10-15",
+      "registros_identicos": 0,
+      "coordenadas_repetidas": 0,
+      "camadas_iguais": false
+    }
+  ],
+  "hashes_camadas": {
+    "2026-01": "43be372d98834580ba9772acd1401638541476be721cefff60f63711efb2f3ce",
+    "2026-02": "e22095c3701739a4ba36fca4c4bd844dac5482469207665fca2feca1b0b9ceb4",
+    "2026-03": "496d0f40c27419bb98490ceaa468521bb71cf3f8cf9f41f7c05189499f85f67c",
+    "2026-04": "f7ac2c7415ffa7a0d62bcd6152ed2dee5eaa4793616a340dcf7d9aaa5d258c0e",
+    "2026-05": "9434a611c7d60f0271104070f9b93dd798f003e51490a6332ba4e9637c5a08eb",
+    "2026-06": "69b7baa300bf1ab08f4241c6d553f39e28841fbcd2740b92dddb1069b6ba287c",
+    "2026-07": "4293e99899612c3473e8170b1ab5401b5da225125fea4b721411ea4a19f24920",
+    "2026-08": "95b7cf9f7eaa71fdacebbb91d2913a376e0146c8da19b4cd0e367b6aa082195e",
+    "2026-09": "91baf7fbc0eb2b18cd8065c55887e31f792e22aedaebecbc46facd143a13af26",
+    "2026-10": "c0b86310b1c114ca0e2a99cf6c95e7daa8f4acd57bcd0d7c7b670143feda8e6a",
+    "2026-10-01": "88024f96ba67e5388005e425db6e88a44633c5420b2ceb7804d3bf30b2491911",
+    "2026-10-02": "ef6c306c72a4029fa0c1d1529536f1b240edd76cc2ffbf26880d2657330271bd",
+    "2026-10-03": "5424fc3552cb282f64f379e5f18d8e55b3d596a6e0ba1904eed6021046f4ebd2",
+    "2026-10-04": "e98b55faede77844c32721b5ad151b8fa95cc98bf8356520b30ca73c9c881a11",
+    "2026-10-05": "633703a0318a20c9d8be2b8c55017dd2824304f1fc18438d1967157fe7378fe3",
+    "2026-10-06": "e4a89ed725b9a43124804009fdb791fbfe6f934af5dbda891f8ff0301ad326ab",
+    "2026-10-07": "2bcec171104ccb5e7c3d9d9fc96d8cae1ed3c0fdb011b0b111fc72d771d1626c",
+    "2026-10-08": "796baf3c3c9c42cb4182ca9c51d6d5404c3c717d275eb84027f0cc28fbf8ca54",
+    "2026-10-09": "b93bdcf43727ccf1a9061b2a23b5f1b25e019a407cb502a406a47ce9d8e80f2d",
+    "2026-10-10": "8c59aa52ca301c360aff0e67b33294f1433067604ffa0436c785896359dfa1a0",
+    "2026-10-11": "dae6e590d1d7a8cbf68e83e87142d249b42a9a4b1f86da84fc90bf5496d935e9",
+    "2026-10-12": "f0d283f6c0e2f05824ed84778e287e28889e581e720a5a5dd70b0a4ffb0917c8",
+    "2026-10-13": "e5bc453b56c27c7e38c5945329927f21c6862f4538404ec1f2533a69fa1ff228",
+    "2026-10-14": "ab66bc49de48c3ee7799b0e0574d3c8c9cf3f71426b3b9f5978b69180714a7cd",
+    "2026-10-15": "347c3686bc8f2c891f03156348279f30015b424ec65d926095553643a5c83bf4"
+  },
+  "auditoria_edicao_anterior": [
+    {
+      "dia": "2026-10-08",
+      "contagem": 3034,
+      "contador": 3034,
+      "recontagem_fontes_atuais": 3034,
+      "sha256_camada": "8558ec2b40516572d8495b1b06a3b18b4ebd551ec1b4ca5c31069f26f04b9922"
+    },
+    {
+      "dia": "2026-10-09",
+      "contagem": 2418,
+      "contador": 2418,
+      "recontagem_fontes_atuais": 2418,
+      "sha256_camada": "45a8e2bd42604afb6c60bee4f54b3cbd465c9a0e6d031b40f4e68396f0656640"
+    },
+    {
+      "dia": "2026-10-10",
+      "contagem": 1795,
+      "contador": 1795,
+      "recontagem_fontes_atuais": 1795,
+      "sha256_camada": "dd7faa7b9bfcd5a0679463bc41228dc8311dad652abaf993d5d4a6d9340db3f8"
+    },
+    {
+      "dia": "2026-10-11",
+      "contagem": 1050,
+      "contador": 1050,
+      "recontagem_fontes_atuais": 1050,
+      "sha256_camada": "b6628dda688ca7790de68b29fb458e2b1e39761656417a1bba8ae571752b3d3b"
+    },
+    {
+      "dia": "2026-10-12",
+      "contagem": 730,
+      "contador": 730,
+      "recontagem_fontes_atuais": 730,
+      "sha256_camada": "fa44551ba1d92f481b0e8129008531bd69710fa88cd2cb91f5e504c52cc5180b"
+    },
+    {
+      "dia": "2026-10-13",
+      "contagem": 1110,
+      "contador": 1110,
+      "recontagem_fontes_atuais": 1110,
+      "sha256_camada": "1210f7912ee618fb75892c4711d915dfd657e5ca4f96c1bc92680abe826324c7"
+    },
+    {
+      "dia": "2026-10-14",
+      "contagem": 1785,
+      "contador": 1785,
+      "recontagem_fontes_atuais": 1785,
+      "sha256_camada": "8caaab828b6a06c004bb142c48f42aa91154a4c2142986f3e0b91c168be5f546"
+    }
+  ],
+  "diagnostico_anterior": "Contadores e dados de cada dia conferem; hashes das camadas diárias são distintos. A composição conservava os dias anteriores em cinza, provocando persistência espacial. Nova edição remove camadas anteriores.",
+  "limites_sha256": {
+    "Limites_Amazonia_Legal_2024_shp.zip": "76bb6e19016997f6dbda8b4dda49eb9f1c8f9eb7e6fdb353be0daa7156156e54",
+    "Mun_Amazonia_Legal_2024_shp.zip": "1af12c71fd1eb33f3eaa3265a26f767ef189efe40272104fd0968cd54385dea4"
+  },
+  "limitacao": "Presença de registros e arquivos não comprova completude de todas as passagens. Dia 15 parcial; outubro não comparável diretamente a meses completos."
+}

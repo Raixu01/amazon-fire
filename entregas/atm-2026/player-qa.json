@@ -1,0 +1,9 @@
+{
+  "duration": 100,
+  "width": 1920,
+  "height": 1080,
+  "source": "http://127.0.0.1:8892/media/pulso-atm-2026.mp4",
+  "reproduziu": true,
+  "seek_segundo": 71,
+  "layout_mobile_sem_overflow": true
+}
