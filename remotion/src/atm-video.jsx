@@ -17,13 +17,13 @@ function Brand({large=false,frame=150}){
       <Img src={staticFile('atm/pulso-original.jpeg')} style={{position:'absolute',width:w*1920/1184,maxWidth:'none',left:-w*367/1184,top:-w*427/1184}} />
     </div>
     <div style={{height:large?146:56,width:large?3:2,background:'#18333e',transform:`scaleY(${clamp(frame,25,48)})`}} />
-    <div style={{fontSize:large?146:54,fontWeight:600,letterSpacing:-3,opacity:clamp(frame,48,73)}}><span style={{color:'#0c897c'}}>.</span>ATM</div>
+    <div style={{fontSize:large?146:54,fontWeight:600,letterSpacing:-3,opacity:clamp(frame,48,73)}}><span style={{color:'#0c897c'}}>.</span>atm</div>
   </div>;
 }
 function Header({title,sub}){return <div style={{position:'absolute',inset:'0 0 auto',height:140,background:'#fff',display:'flex',alignItems:'center',padding:'0 46px',gap:65}}>
   <Brand/><div style={{height:62,width:1,background:'#cbd6d7'}}/><div><T size={34} color='#091b24' style={{fontWeight:700}}>{title}</T><T size={21} color='#48626b' style={{marginTop:8}}>{sub}</T></div>
 </div>;}
-function Map({zoom=0,layer=null,region=false,labels=false}){
+function Map({zoom=0,layer=null,region=false,labels=false,allMunicipios=false}){
   const box=D.nationalBox.map((v,i)=>v+(D.regionalBox[i]-v)*zoom);
   const img=(src,b,opacity=1)=><image href={staticFile(`atm/${src}`)} x={b[0]} y={b[1]} width={b[2]} height={b[3]} opacity={opacity}/>;
   return <div style={{position:'absolute',left:600,top:192,width:1280,height:810,borderRadius:16,overflow:'hidden',background:'#16343c',border:'1px solid #37505a'}}>
@@ -32,7 +32,8 @@ function Map({zoom=0,layer=null,region=false,labels=false}){
       {zoom>.5&&img('regiao.jpg',D.regionalBox,clamp(zoom,.5,1))}
       <rect x={box[0]} y={box[1]} width={box[2]} height={box[3]} fill='#001521' opacity='.33'/>
       <path d={D.legalPath} fill='none' stroke={C.cyan} strokeWidth={2} vectorEffect='non-scaling-stroke' opacity={1-zoom*.75}/>
-      {D.paths.map(p=><path key={p.code} d={p.path} fill={p.code==='1500602'?'#ffe49a':'none'} fillOpacity='.035' stroke={p.code==='1500602'?C.gold:p.chosen?'#c2d2cf':'#7a989d'} strokeWidth={p.code==='1500602'?2.8:p.chosen?1.4:.7} vectorEffect='non-scaling-stroke' opacity={.25+.75*zoom}/>)}
+      {allMunicipios&&D.allPaths.map((p,i)=><path key={`municipio-${i}`} d={p} fill='none' stroke='#b7d2d0' strokeWidth={.55} vectorEffect='non-scaling-stroke' opacity={1-zoom}/>) }
+      {D.paths.map(p=><path key={p.code} d={p.path} fill={p.code==='1500602'?'#ffe49a':'none'} fillOpacity='.035' stroke={p.code==='1500602'?C.gold:p.chosen?'#c2d2cf':'#7a989d'} strokeWidth={p.code==='1500602'?2.8:p.chosen?1.4:.7} vectorEffect='non-scaling-stroke' opacity={zoom}/>) }
       {layer&&img(layer,region?D.regionalBox:D.nationalBox)}
     </svg>
     {labels&&D.labels.map(p=>{
@@ -90,4 +91,25 @@ export function ATMVideo({preview=false}){
   else if(f<2760){const max=Math.max(...Object.values(D.daily));const peak=days.find(d=>D.daily[d]===max);content=<><Header title='Síntese da observação regional' sub={`01–15/10/2026 • corte: ${D.cutoff} • Brasília`}/><Map zoom={1} region layer='acumulado.png' labels/><Side><Tag>06 / O PERÍODO EM NÚMEROS</Tag><T size={89} color={C.orange} style={{fontWeight:700}}>{n(D.total)}</T><T size={30}>detecções nos seis municípios</T><div style={{marginTop:40,paddingTop:28,borderTop:'1px solid #37505a'}}><T size={24} color={C.muted}>Maior contagem diária</T><T size={42} style={{fontWeight:700,marginTop:12}}>{peak.slice(-2)} de outubro</T><T size={30} color={C.cyan} style={{marginTop:12}}>{n(max)} detecções</T></div><div style={{marginTop:40,paddingTop:28,borderTop:'1px solid #37505a'}}><T size={25}>15 camadas diárias distintas.</T><T size={24} color={C.muted} style={{marginTop:22}}>Uma mesma área pode ser detectada em dias diferentes.</T><T size={24} color={C.muted} style={{marginTop:22}}>Ausência de pontos não comprova ausência de fogo.</T></div></Side></>;}
   else content=<Credits/>;
   return <AbsoluteFill style={{background:C.bg,color:C.white,fontFamily:'Arial, Helvetica, sans-serif'}}>{content}<div style={{position:'absolute',left:46,bottom:23,right:46,display:'flex',justifyContent:'space-between',fontSize:19,color:C.muted}}><span>INPE / Programa Queimadas • NOAA-20 • limites IBGE 2024</span><span>Focos ≠ incêndios únicos • outubro parcial</span></div><div style={{position:'absolute',bottom:0,left:0,height:5,width:`${f/2999*100}%`,background:C.cyan}}/></AbsoluteFill>;
+}
+
+export function ATMShortVideo(){
+  const f=useCurrentFrame();
+  let content;
+  if(f<120) {
+    content=<Opening frame={f}/>;
+  } else if(f<390) {
+    content=<><Header title='Focos de Calor na Amazônia — 2026' sub='Amazônia Legal brasileira • janeiro a outubro'/><Map layer='mes-2026-10.png' allMunicipios/><Side><Tag>AMAZÔNIA LEGAL</Tag><T size={52} style={{fontWeight:700}}>Focos de Calor<br/>na Amazônia —<br/>2026</T><T size={26} color={C.muted} style={{marginTop:30}}>Todos os municípios da Amazônia Legal estão desenhados no mapa.</T><Legend national/><T size={20} color={C.muted} style={{marginTop:22}}>Outubro: 1–15, período parcial.<br/>Fonte: INPE • NOAA-20.</T></Side></>;
+  } else if(f<510) {
+    const z=interpolate(f,[390,495],[0,1],{extrapolateLeft:'clamp',extrapolateRight:'clamp',easing:Easing.inOut(Easing.cubic)});
+    content=<><Header title='Primeira quinzena de outubro de 2026 — Região de Altamira-Pará' sub='Altamira e municípios vizinhos'/><Map zoom={z} layer={z<.12?'mes-2026-10.png':null} allMunicipios labels={z>.92}/><Side><Tag>APROXIMAÇÃO REGIONAL</Tag><T size={46} style={{fontWeight:700}}>Altamira<br/>e região</T><T size={25} color={C.muted} style={{marginTop:25}}>Os contornos de toda a Amazônia se apagam durante a aproximação.</T><Legend/><T size={21} color={C.muted} style={{marginTop:22}}>Em seguida, ficam somente Altamira e seus vizinhos em destaque.</T></Side></>;
+  } else if(f<1410) {
+    const i=Math.min(14,Math.floor((f-510)/60));const day=days[i];
+    content=<><Header title='Primeira quinzena de outubro de 2026 — Região de Altamira-Pará' sub='Detecções diárias • NOAA-20 • 01–15 de outubro'/><Map zoom={1} region layer={`dia-${day}.png`} labels/><Side><Tag>DIA A DIA</Tag><T size={54} style={{fontWeight:700}}>{String(i+1).padStart(2,'0')} OUT <span style={{color:C.muted}}>2026</span></T><T size={23} color={i===14?C.gold:C.muted} style={{marginTop:12}}>{i===14?'PARCIAL • corte às 18h40':'00h–24h • horário de Brasília'}</T><T size={82} color={C.orange} style={{fontWeight:700,marginTop:24}}>{n(D.daily[day])}</T><T size={25}>detecções nos seis municípios</T><DailyChart index={i}/><Legend/></Side></>;
+  } else if(f<1620) {
+    content=<><Header title='Primeira quinzena de outubro de 2026 — Região de Altamira-Pará' sub='Síntese das detecções'/><Map zoom={1} region layer='acumulado.png' labels/><Side><Tag>SÍNTESE DO PERÍODO</Tag><T size={84} color={C.orange} style={{fontWeight:700}}>{n(D.total)}</T><T size={28}>detecções nos seis municípios</T><T size={25} style={{marginTop:43}}>Uruará: 5.850<br/>Altamira: 5.039</T><T size={23} color={C.muted} style={{marginTop:35}}>Acumulado de 01–15/10.<br/>Dia 15 parcial.</T><Legend/></Side></>;
+  } else {
+    content=<Credits/>;
+  }
+  return <AbsoluteFill style={{background:C.bg,color:C.white,fontFamily:'Arial, Helvetica, sans-serif'}}>{content}<div style={{position:'absolute',left:46,bottom:23,right:46,display:'flex',justifyContent:'space-between',fontSize:19,color:C.muted}}><span>INPE / Programa Queimadas • NOAA-20 • limites IBGE 2024</span><span>Focos ≠ incêndios únicos • outubro parcial</span></div><div style={{position:'absolute',bottom:0,left:0,height:5,width:`${f/1799*100}%`,background:C.cyan}}/></AbsoluteFill>;
 }

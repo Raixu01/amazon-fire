@@ -116,6 +116,7 @@ def pathgeom(geo):
             chunks.append('M'+' L'.join(f'{x:.1f},{-y:.1f}' for x,y in ring.coords)+' Z')
     return ' '.join(chunks)
 paths=[dict(code=r.CD_MUN,name=r.NM_MUN,path=pathgeom(r.geometry.simplify(700)),chosen=r.CD_MUN in chosen) for _,r in merc_mesh.iterrows()]
+all_paths=[pathgeom(geometry.simplify(4500)) for geometry in mesh.to_crs(3857).geometry]
 labels=[]
 for _,r in chosen_mesh.to_crs(3857).iterrows():
     p=r.geometry.representative_point();labels.append(dict(code=r.CD_MUN,name=r.NM_MUN,x=p.x,y=-p.y))
@@ -153,7 +154,7 @@ assert all(x['contagem']==x['contador'] for x in old_checks)
 audit=dict(satelite=SAT,nota_sensor='Seleção editorial de um sensor constante; não é a série oficial de satélite de referência. Contagens não equivalem a incêndios únicos.',periodo_inicio='2026-01-01T00:00:00-03:00',corte_observacoes_brasilia=cutoff.isoformat(),ultimo_registro_sensor_brasilia=selected.brasilia.max().isoformat(),dia15_parcial=True,fontes=[x[1] for x in files],registros_invalidos=invalid,duplicatas_removidas=duplicates,empates_divisa=boundary_duplicates,dias_sem_registro_nacional_sensor=missing,contagens_mensais={k:int(v) for k,v in monthly.items()},contagens_diarias={k:int(v) for k,v in counts.items()},total_regional=len(region),municipios_selecionados=chosen,municipios_vizinhos=neighbors.NM_MUN.tolist(),comparacoes_diarias=comparisons,hashes_camadas=layer_hashes,auditoria_edicao_anterior=old_checks,diagnostico_anterior='Contadores e dados de cada dia conferem; hashes das camadas diárias são distintos. A composição conservava os dias anteriores em cinza, provocando persistência espacial. Nova edição remove camadas anteriores.',limites_sha256={p:digest((ROOT/p).read_bytes()) for p in ['Limites_Amazonia_Legal_2024_shp.zip','Mun_Amazonia_Legal_2024_shp.zip']},limitacao='Presença de registros e arquivos não comprova completude de todas as passagens. Dia 15 parcial; outubro não comparável diretamente a meses completos.')
 save(OUT/'auditoria.json',audit)
 rank=[dict(code=c,name=n,count=int(v)) for (c,n),v in ranking.items() if c in chosen]
-meta=dict(sensor=SAT,cutoff=cutoff.strftime('%d/%m/%Y às %Hh%M'),monthly=audit['contagens_mensais'],daily=audit['contagens_diarias'],rank=rank,total=len(region),nationalBox=svgbox(national),regionalBox=svgbox(regional),legalPath=pathgeom(merc_legal.geometry.union_all().simplify(2200)),paths=paths,labels=labels,extentNational=national,extentRegional=regional)
+meta=dict(sensor=SAT,cutoff=cutoff.strftime('%d/%m/%Y às %Hh%M'),monthly=audit['contagens_mensais'],daily=audit['contagens_diarias'],rank=rank,total=len(region),nationalBox=svgbox(national),regionalBox=svgbox(regional),legalPath=pathgeom(merc_legal.geometry.union_all().simplify(2200)),allPaths=all_paths,paths=paths,labels=labels,extentNational=national,extentRegional=regional)
 save(ROOT/'remotion/src/atm-dados.json',meta)
 save(OUT/'mapa.json',meta)
 print(json.dumps(dict(total=len(region),monthly=meta['monthly'],daily=meta['daily'],rank=rank,cutoff=meta['cutoff'],neighbors=neighbors.NM_MUN.tolist()),ensure_ascii=False,indent=2),flush=True)

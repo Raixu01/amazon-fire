@@ -3,6 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "scripts": {
+    "render:atm:curto": "remotion render src/index.jsx PulsoATM2026Curto ../entregas/atm-2026/pulso-atm-2026-curto.mp4 --codec h264 --pixel-format yuv420p --concurrency 1",
     "render:atm": "remotion render src/index.jsx PulsoATM2026 ../entregas/atm-2026/pulso-atm-2026.mp4 --codec h264 --pixel-format yuv420p --concurrency 4",
     "render:atm:preview": "remotion render src/index.jsx PulsoATMPrevia ../entregas/atm-2026/previa-pulso-atm.mp4 --codec h264 --pixel-format yuv420p --concurrency 4",
     "studio": "remotion studio src/index.jsx",
