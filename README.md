@@ -2,7 +2,7 @@
 
 ## Pulso | .atm — edição curta de 2026
 
-[Assistir ao vídeo de 60 segundos](https://raixu01.github.io/amazon-fire/video.html), com a marca Pulso | .atm, todos os municípios da Amazônia Legal no mapa amplo e análise diária da região de Altamira em 1–15/10/2026. [Nota técnica e auditoria](entregas/atm-2026/LEIA-ME.md). Sensor fixo NOAA-20; dia 15 parcial, corte às 18h40 de Brasília. A edição substitui as camadas a cada dia, sem acúmulo temporal.
+[Assistir ao vídeo de 90 segundos](https://raixu01.github.io/amazon-fire/video.html), com a marca Pulso | .atm, evolução dos dez meses de 2026 nos municípios da Amazônia Legal e análise diária da região de Altamira em 1–15/10/2026. [Nota técnica e auditoria](entregas/atm-2026/LEIA-ME.md). Sensor fixo NOAA-20; dia 15 parcial, corte às 18h40 de Brasília. A edição substitui as camadas a cada dia, sem acúmulo temporal.
 
 ## Vídeo Altamira (8–14 de outubro de 2026)
 

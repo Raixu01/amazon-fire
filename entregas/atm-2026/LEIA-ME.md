@@ -1,6 +1,6 @@
 # Pulso | .ATM — Amazônia Legal e região de Altamira
 
-Edição curta de 60 segundos, 1920 × 1080, 30 fps, MP4/H.264, sem narração. A marca original foi fornecida em `pulso.png_20260922115227.jpeg` e permanece sem alteração; seu enquadramento é feito na composição como **Pulso | .atm**. Projeto editável: `remotion/src/atm-video.jsx`.
+Edição curta de 90 segundos, 1920 × 1080, 30 fps, MP4/H.264, sem narração. A marca original foi fornecida em `pulso.png_20260922115227.jpeg` e permanece sem alteração; seu enquadramento é feito na composição como **Pulso | .atm**. Projeto editável: `remotion/src/atm-video.jsx`.
 
 No primeiro mapa, aparecem os contornos de todos os municípios da Amazônia Legal e a legenda “Focos de Calor na Amazônia — 2026”. Durante a aproximação, esses contornos se apagam; permanecem Altamira e os cinco vizinhos destacados, com a legenda “Primeira quinzena de outubro de 2026 — Região de Altamira-Pará”.
 

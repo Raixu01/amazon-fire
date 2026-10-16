@@ -2,7 +2,7 @@
 
 ## Nova edição Pulso | .ATM
 
-`npm run render:atm:curto` produz a edição principal de **60 segundos**, com todos os municípios da Amazônia Legal no mapa amplo, aproximação para Altamira e análise diária dos quinze dias. O render usa uma única instância do navegador para limitar memória e GPU. `npm run render:atm` preserva a edição de 100 segundos; `npm run render:atm:preview` produz a prévia de 19 segundos. Todas usam a logo fornecida e os assets offline em `public/atm/`.
+`npm run render:atm:curto` produz a edição principal de **90 segundos**, com a evolução mensal de janeiro a outubro nos municípios da Amazônia Legal, aproximação para Altamira e análise diária dos quinze dias. O render usa uma única instância do navegador para limitar memória e GPU. `npm run render:atm` preserva a edição de 100 segundos; `npm run render:atm:preview` produz a prévia de 19 segundos. Todas usam a logo fornecida e os assets offline em `public/atm/`.
 
 Composição: `src/atm-video.jsx`; dados auditados: `src/atm-dados.json`. Fontes, filtro NOAA-20, corte parcial e reprodução dos dados estão na [nota técnica](../entregas/atm-2026/LEIA-ME.md). A edição anterior permanece disponível abaixo.
 
